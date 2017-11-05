@@ -4,16 +4,17 @@ import { FormsModule }    from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService }  from './api/in-memory-data.service';
 
 import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './dashboard.component';
-import { HeroDetailComponent }  from './hero-detail.component';
-import { HeroesComponent }      from './heroes.component';
-import { HeroService }          from './hero.service';
-import { HeroSearchComponent }  from './hero-search.component';
-import { AppRoutingModule }     from './app-routing.module';
-
+import { DashboardComponent }   from './dashboard/dashboard.component';
+import { HeroDetailComponent }  from './hero/hero-detail.component';
+import { HeroesComponent }      from './hero/heroes.component';
+import { HeroService }          from './hero/hero.service';
+import { HeroSearchComponent }  from './hero/hero-search.component';
+import { AppRoutingModule }     from './routing/app-routing.module';
+import { FooterComponent }      from './footer/footer.component';
+import { HeaderComponent }      from './header/header.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -27,7 +28,9 @@ import { AppRoutingModule }     from './app-routing.module';
     DashboardComponent,
     HeroDetailComponent,
     HeroesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    FooterComponent,
+    HeaderComponent 
   ],
   providers: [ HeroService ],
   bootstrap: [ AppComponent ]
